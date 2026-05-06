@@ -1,25 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Posta MedicaFast</title>
-  <style>
-    body { font-family: Arial; background:#f4f4f4; }
-    .box { max-width:600px; margin:50px auto; background:white; padding:20px; border-radius:10px; }
-    .email { border:1px solid #ccc; padding:15px; margin-top:10px; cursor:pointer; }
-    .email:hover { background:#f0f0f0; }
-  </style>
+<meta charset="UTF-8">
+<title>MedicaFast - Posta in arrivo</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef2f7;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    background: #1f3b57;
+    color: white;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* CONTAINER */
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  /* HEADER MAIL */
+  .header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: #f7f9fb;
+    font-weight: 600;
+  }
+
+  /* EMAIL ITEM */
+  .email {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .email:hover {
+    background: #f0f6ff;
+  }
+
+  .sender {
+    font-weight: bold;
+    color: #1f3b57;
+  }
+
+  .subject {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  .meta {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+  }
+
+  .urgent {
+    color: #d93025;
+    font-weight: 600;
+  }
+
+</style>
 </head>
 
 <body>
 
-<div class="box">
-  <h2>📬 Posta in arrivo</h2>
+<div class="topbar">
+  🏥 MedicaFast - WebMail Sicuro
+</div>
 
+<div class="container">
+
+  <div class="header">
+    Posta in arrivo (1 nuovo messaggio)
+  </div>
+
+  <!-- EMAIL FINTA -->
   <div class="email" onclick="location.href='login.html'">
-    <b>Amministrazione MedicaFast</b><br>
-    ⚠️ Aggiornamento urgente account<br>
-    <small>Richiesto entro 24 ore</small>
+
+    <div class="sender">
+      Amministrazione MedicaFast
+    </div>
+
+    <div class="subject urgent">
+      ⚠️ Azione richiesta: aggiornamento obbligatorio profilo privacy 2024
+    </div>
+
+    <div class="meta">
+      no-reply@medicafast-portale.com • 2 minuti fa
+    </div>
+
   </div>
 
 </div>
