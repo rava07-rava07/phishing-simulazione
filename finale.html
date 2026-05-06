@@ -1,35 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Analisi Attacco</title>
+<title>MedicaFast - Report Sicurezza</title>
+
 <style>
- body { font-family: Arial; max-width:700px; margin:40px auto; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+  }
+
+  .header {
+    background: #1f3b57;
+    color: white;
+    padding: 18px 25px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+
+  h2 {
+    color: #1f3b57;
+  }
+
+  .box {
+    background: #f7f9fb;
+    border-left: 5px solid #1f3b57;
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .danger {
+    border-left-color: #d93025;
+  }
+
+  ul {
+    line-height: 1.7;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #d93025;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .safe {
+    background: #1a9c5a;
+  }
+
+  .footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+  }
 </style>
 </head>
 
 <body>
 
-<h1>🎓 Analisi della simulazione phishing</h1>
+<div class="header">
+  🛡️ MedicaFast - Security Awareness Report
+</div>
 
-<h3>🔍 Tecniche usate</h3>
-<ul>
-  <li>Urgenza (“entro 24 ore”)</li>
-  <li>Autorità (servizio amministrativo)</li>
-  <li>Link ingannevole</li>
-</ul>
+<div class="container">
 
-<h3>🛡️ Come riconoscerlo</h3>
-<ul>
-  <li>Controllare il dominio reale</li>
-  <li>Non cliccare link urgenti</li>
-  <li>Verificare sempre dal sito ufficiale</li>
-</ul>
+  <h2>📊 Analisi simulazione phishing</h2>
 
-<h3>⚠️ Importante</h3>
-<p>
-Questa è una simulazione educativa. Nessun dato è stato raccolto o inviato.
-</p>
+  <div class="box danger">
+    <span class="badge">ATTACCO SIMULATO</span>
+    <p>
+      È stata eseguita una simulazione di phishing con email e portale falso.
+    </p>
+  </div>
+
+  <h3>🔍 Tecniche utilizzate</h3>
+  <ul>
+    <li>Urgenza temporale (24 ore)</li>
+    <li>Finta autorità amministrativa</li>
+    <li>Dominio simile a quello ufficiale</li>
+    <li>Replica di portale di login medico</li>
+  </ul>
+
+  <h3>⚠️ Rischi identificati</h3>
+  <ul>
+    <li>Possibile furto credenziali</li>
+    <li>Accesso non autorizzato a dati sanitari</li>
+    <li>Inganno tramite email credibili</li>
+  </ul>
+
+  <h3>🛡️ Contromisure consigliate</h3>
+
+  <div class="box">
+    <ul>
+      <li>Verificare sempre il dominio del mittente</li>
+      <li>Non inserire credenziali da link email</li>
+      <li>Usare autenticazione a due fattori (2FA)</li>
+      <li>Formazione periodica anti-phishing</li>
+    </ul>
+  </div>
+
+  <h3>✅ Stato simulazione</h3>
+
+  <div class="box">
+    <span class="badge safe">COMPLETATO</span>
+    <p>
+      Nessun dato reale è stato raccolto o trasmesso.
+      Questa è una simulazione didattica.
+    </p>
+  </div>
+
+  <p style="text-align:center; margin-top:25px;">
+    🔚 Fine simulazione attacco phishing
+  </p>
+
+  <div class="footer">
+    MedicaFast Security Training Module v1.0
+  </div>
+
+</div>
 
 </body>
 </html>
