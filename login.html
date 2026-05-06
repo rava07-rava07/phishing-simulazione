@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Accesso MedicaFast</title>
+<style>
+  body { font-family: Arial; background:#e9eef5; text-align:center; }
+  .card { background:white; padding:30px; width:300px; margin:80px auto; border-radius:10px; }
+  input { width:90%; padding:10px; margin:8px 0; }
+  button { padding:10px; width:100%; background:#0056b3; color:white; border:none; }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🔐 Accesso Portale</h2>
+  <p>Inserisci le credenziali</p>
+
+  <form onsubmit="fake(event)">
+    <input type="text" placeholder="Codice medico" required>
+    <input type="password" placeholder="Password" required>
+    <button>Accedi</button>
+  </form>
+
+  <p id="msg" style="display:none; color:red;"></p>
+</div>
+
+<script>
+function fake(e){
+  e.preventDefault();
+
+  document.getElementById("msg").style.display = "block";
+  document.getElementById("msg").innerHTML =
+    "⚠️ SIMULAZIONE PHISHING: nessun dato è stato inviato.<br>Questo era un esempio didattico.";
+}
+</script>
+
+</body>
+</html>
