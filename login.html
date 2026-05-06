@@ -1,38 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Accesso MedicaFast</title>
+<title>MedicaFast - Accesso Sicuro</title>
+
 <style>
-  body { font-family: Arial; background:#e9eef5; text-align:center; }
-  .card { background:white; padding:30px; width:300px; margin:80px auto; border-radius:10px; }
-  input { width:90%; padding:10px; margin:8px 0; }
-  button { padding:10px; width:100%; background:#0056b3; color:white; border:none; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e9eef5, #dfe7f1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 380px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    padding: 30px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f3b57;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #1f3b57;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #163049;
+  }
+
+  .warning {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #d93025;
+    display: none;
+  }
+
+  .footer {
+    margin-top: 15px;
+    font-size: 11px;
+    color: gray;
+  }
 </style>
 </head>
 
 <body>
 
 <div class="card">
-  <h2>🔐 Accesso Portale</h2>
-  <p>Inserisci le credenziali</p>
 
-  <form onsubmit="fake(event)">
+  <div class="logo">🏥 MedicaFast</div>
+  <div class="subtitle">Accesso area medici autorizzati</div>
+
+  <form onsubmit="simula(event)">
     <input type="text" placeholder="Codice medico" required>
     <input type="password" placeholder="Password" required>
-    <button>Accedi</button>
+    <button type="submit">Accedi</button>
   </form>
 
-  <p id="msg" style="display:none; color:red;"></p>
+  <div class="warning" id="msg">
+    ⚠️ Simulazione phishing: nessun dato è stato inviato o registrato.
+  </div>
+
+  <div class="footer">
+    Sistema protetto - Versione 4.2
+  </div>
+
 </div>
 
 <script>
-function fake(e){
+function simula(e) {
   e.preventDefault();
 
   document.getElementById("msg").style.display = "block";
-  document.getElementById("msg").innerHTML =
-    "⚠️ SIMULAZIONE PHISHING: nessun dato è stato inviato.<br>Questo era un esempio didattico.";
+
+  // dopo 2 secondi vai alla pagina finale
+  setTimeout(() => {
+    window.location.href = "finale.html";
+  }, 2000);
 }
 </script>
 
